@@ -387,7 +387,6 @@ ghost_pass_wizard() {
     # Ghost API reference: https://ghost.org/docs/admin-api/
     wizard_url="http://127.0.0.1:${port}/ghost/api/v3/admin/authentication/setup/"
     curl_opts=(
-        "--silent"
         "-H" "Content-Type: application/json"
         "-H" "Cache-Control: no-cache"
     )
