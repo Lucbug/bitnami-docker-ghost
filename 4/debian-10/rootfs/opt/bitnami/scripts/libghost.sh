@@ -409,6 +409,7 @@ EOF
         "--data" "$data"
     )
     curl_output="$(curl "${curl_opts[@]}" "${curl_data_opts[@]}" "${wizard_url}" 2>/dev/null)"
+    echo "$curl_output"
     debug_execute echo "$curl_output"
     if [[ "$curl_output" != *"\"id\":\"1\",\"name\":\"${GHOST_USERNAME}\""* ]]; then
         error "An error occurred while installing Ghost"
